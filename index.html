@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonus Manager</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>💰 Bonus Manager</h1>
+
+<div class="top-right">
+
+<div class="box">
+<h3>Bonus Oggi</h3>
+<span id="bonusOggi">0 €</span>
+</div>
+
+<div class="box">
+<h3>Bonus Mese</h3>
+<span id="bonusMese">0 €</span>
+</div>
+
+<div class="box">
+<h3>Utenti</h3>
+<span id="totUtenti">0</span>
+</div>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="left">
+
+<div class="card">
+
+<h2>Nuovo Bonus</h2>
+
+<label>Piattaforma</label>
+
+<select id="piattaforma">
+<option>Goldbet</option>
+<option>Totosi</option>
+<option>Betflag</option>
+</select>
+
+<label>User</label>
+
+<select id="utente"></select>
+
+<button id="nuovoUserBtn">
+➕ Nuovo User
+</button>
+
+<label>Tipo Bonus</label>
+
+<select id="tipoBonus">
+<option>Bonus</option>
+<option>1° Torneo</option>
+<option>2° Torneo</option>
+<option>3° Torneo</option>
+</select>
+
+<label>Importo</label>
+
+<select id="importo">
+
+<option value="10">10 €</option>
+<option value="15">15 €</option>
+<option value="20">20 €</option>
+<option value="25">25 €</option>
+<option value="30">30 €</option>
+<option value="35">35 €</option>
+<option value="40">40 €</option>
+<option value="45">45 €</option>
+<option value="50">50 €</option>
+
+<option value="600">600 € (1°)</option>
+<option value="300">300 € (2°)</option>
+<option value="100">100 € (3°)</option>
+
+</select>
+
+<label>Note</label>
+
+<textarea id="note"></textarea>
+
+<button id="salvaBonus">
+💾 Salva Bonus
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Nuovo User</h2>
+
+<input
+type="text"
+id="username"
+placeholder="Username">
+
+<select id="piattaformaUser">
+
+<option>Goldbet</option>
+<option>Totosi</option>
+<option>Betflag</option>
+
+</select>
+
+<button id="salvaUser">
+
+Aggiungi User
+
+</button>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<div class="card">
+
+<h2>Dashboard</h2>
+
+<canvas id="grafico"></canvas>
+
+</div>
+
+<div class="card">
+
+<h2>Storico Bonus</h2>
+
+<input
+type="text"
+id="ricerca"
+placeholder="Ricerca user">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Data</th>
+<th>Piattaforma</th>
+<th>User</th>
+<th>Tipo</th>
+<th>Bonus</th>
+
+</tr>
+
+</thead>
+
+<tbody id="storico">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
